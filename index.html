@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dedication Website</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b0f29e9bfe.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script defer src="./main.js"></script>
+</head>
+<body>
+    <div class="flip">
+         <!-- Previous Button -->
+    <button id="prev-btn">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <!-- Flip Book  -->
+    <div id="flip-book" class="flip-book">
+        <!-- Front Paper 1 -->
+        <div id="p1" class="paper">
+            <div class="front">
+                <div id="front-1" class="front-content">
+                    <img class="cover-page" src="./media/Friends.png" alt="Friends">
+                </div>
+            </div>
+            <div class="back">
+                <div id="back-1" class="back-content">
+                    <img src="./media/Levi.png" class="content-image" alt="Levi">
+                </div>
+            </div>
+        </div>
+        <!-- Front Paper 2 -->
+        <div id="p2" class="paper">
+            <div class="front">
+                <div id="front-2" class="front-content">
+                    <img src="./media/Stephen.png" class="content-image" alt="Stephen">
+                </div>
+            </div>
+            <div class="back">
+                <div id="back-2" class="back-content">
+                   <img src="./media/Andrew.png" class="content-image" alt="Andrew">
+                </div>
+            </div>
+        </div>
+        <!-- Front Page 3 -->
+        <div id="p3" class="paper">
+            <div class="front">
+                <div id="front-3" class="front-content">
+                    <img src="./media/Cj.png" class="content-image" alt="Cj">
+                </div>
+            </div>
+            <div class="back">
+                <div id="back-3" class="back-content">
+                    <img src="./media/Gerome.png" class="content-image" alt="Gerome">
+                </div>
+            </div>
+        </div> 
+          <!-- Front Page 4 -->
+          <div id="p4" class="paper">
+            <div class="front">
+                <div id="front-4" class="front-content">
+                    <img src="./media/Karl.png" class="content-image" alt="Karl">
+                </div>
+            </div>
+            <div class="back">
+                <div id="back-4" class="back-content">
+                    <div class="container">
+                        <div class="envelope-wrapper">
+                            <div class="envelope">
+                                <div class="letter">
+                                    <div class="text">
+                                        <strong>Dear Friends.</strong>
+                                        <p>
+                                            Hey friends and BSCS 4-A, I just wanted to let you know that I believe we all have what it takes to graduate, and I'm excited to see us succeed together!
+                                        </p>
+                                        <p><strong> #RoadtoSunkenGarden</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+        <button id="next-btn">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+   
+<!-- Music -->
+    <div class="hero">
+        <div class="music">
+            <p>Artist: Maroon 5</p>
+            <h1>Memories</h1>
+            <div class="track">
+                <div class="flex-item-1"> 
+                    <img src="./media/play.png" id="playBtn">
+                </div>
+                <div class="flex-item-2" id="waveform"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

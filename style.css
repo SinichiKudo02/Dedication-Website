@@ -1,0 +1,299 @@
+/* Common Background Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Libre Caslon Text', serif;
+}
+
+.flip{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F99417;
+}
+
+/* Button Desigsns */
+button{
+    border:none;
+    background-color:transparent;
+    margin: 30px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+
+button:hover i {
+    color: rgb(102, 102, 102);
+}
+
+i {
+    color: #5D3891;
+    font-size:4em;
+}
+
+button:focus{
+    outline: none;
+}
+
+/* Book Design */
+.flip-book{
+    width: 400px;
+    height: 500px;
+    position: relative;
+    transition: transform 0.5s;
+}
+
+.paper{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+}
+
+.front{
+    backface-visibility: hidden;
+    border-left: 6px solid #5D3891;
+}
+
+.front,
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.front{
+    z-index: 1;
+}
+
+.back{
+    z-index: 0;
+}
+
+.front-content,
+.back-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content{
+    transform: rotateY(180deg);
+}
+
+/* Paper Flipped Design */
+.flipped .front,
+.flipped .back{
+    transform: rotateY(-180deg);
+}
+
+/* Paper Z-Index  Designs*/
+#p1 {
+    z-index: 4;
+}
+
+#p2 {
+    z-index: 3;
+}
+
+#p3 {
+    z-index: 2;
+}
+
+#p4{
+    z-index:1;
+}
+
+/* Music Styles */
+.hero{
+    width: 100%;
+    background: #F99417;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music{
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    background: #fff;
+    color: #555;
+    border-radius: 8px;
+}
+
+
+.track {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .track img {
+    width: 50px;
+    margin-right: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .flex-item-1{
+    display: inline-block;
+    vertical-align: top;
+    width: 10%;
+  }
+  .flex-item-2 {
+    display: inline-block;
+    vertical-align: top;
+    width: 90%;
+  }
+
+
+/* Customize */
+.cover-page{
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Picture Format */
+#b1 {
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    justify-content: space-around;
+    position: relative;
+}
+
+.back{
+    background-color: #E8E2E2;
+}
+
+ .content-image {
+    width: 400px;
+    height: 500px;
+    object-fit: cover; 
+    margin: 0 auto;
+} 
+
+.content-images{
+    width: 400px;
+    height: 500px;
+    object-fit: cover; 
+    margin: 0 auto;
+} 
+
+/* Envelope Design */
+.container {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+  .container > .envelope-wrapper {
+    background: #f5edd1;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  }
+  .envelope-wrapper > .envelope {
+    position: relative;
+    width: 300px;
+    height: 230px;
+  }
+  .envelope-wrapper > .envelope::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    border-top: 130px solid #ecdeb8;
+    border-right: 150px solid transparent;
+    border-left: 150px solid transparent;
+    transform-origin: top;
+    transition: all 0.5s ease-in-out 0.7s;
+  }
+  .envelope-wrapper > .envelope::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 0px;
+    height: 0px;
+    border-top: 130px solid transparent;
+    border-right: 150px solid #e6cfa7;
+    border-bottom: 100px solid #e6cfa7;
+    border-left: 150px solid #e6cfa7;
+  }
+  .envelope > .letter {
+    position: absolute;
+    right: 20%;
+    bottom: 0;
+    width: 54%;
+    height: 80%;
+    background: #fff;
+    text-align: center;
+    transition: all 1s ease-in-out;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px 10px;
+  }
+  
+  .envelope > .letter > .text {
+    font-family: 'Libre Carlson text', 'sans-serif';
+    color:  #444;
+    text-align: left;
+    font-size: 10px;
+  }
+  .heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background: #F99417;
+    z-index: 4;
+    transform: translate(-50%, -20%) rotate(45deg);
+    transition: transform 0.5s ease-in-out 1s;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);;
+    cursor: pointer;
+  }
+  .heart:before, 
+  .heart:after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #F99417;
+    border-radius: 50%;
+  }
+  .heart:before {
+    top: -7.5px;
+  }
+  .heart:after {
+    right: 7.5px;
+  }
+  .flap > .envelope:before {
+    transform: rotateX(180deg);
+    z-index: 0;
+  }
+  .flap > .envelope > .letter {
+    bottom: 100px;
+    transform: scale(1.5);
+    transition-delay: 1s;
+  }
+  .flap > .heart {
+    transform: rotate(90deg);
+    transition-delay: 0.4s;
+  }
